@@ -22,8 +22,15 @@ public class Controller : MonoBehaviour {
         
 		SetCountText ();
 	}
-    
-	void FixedUpdate()
+
+    void Update()
+    {
+
+        if (Input.GetKey("escape"))
+            Application.Quit();
+    }
+
+    void FixedUpdate()
 	{
 		float moveHorizontal = Input.GetAxis ("Horizontal");
         
